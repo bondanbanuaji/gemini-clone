@@ -1,3 +1,13 @@
+@keyframes loader {
+    0% {
+        background-position: -800px 0px;
+    }
+
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
 .main {
     flex: 1;
     min=height: 100vh;
@@ -9,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 22px;
+    font-size: 1.375rem;
     padding: 20px;
     color: #585858;
 }
@@ -21,7 +31,7 @@
 
 .main .greet {
     margin: 50px 0px;
-    font-size: 56px;
+    font-size: 3.5rem;
     color: #c4c7c5;
     font-weight: 500;
     padding: 20px;
@@ -61,7 +71,7 @@
 
 .main .card p {
     color: #585858;
-    font-size: 17px;
+    font-size: 1.125rem;
 }
 
 .main .card:hover {
@@ -99,7 +109,7 @@
     border: none;
     outline: none;
     padding: 8px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .search-box div {
@@ -109,7 +119,7 @@
 }
 
 .main .bottom-info {
-    font-size: 13px;
+    font-size: 0.875rem;
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
@@ -142,4 +152,27 @@
     display: flex;
     align-items: start;
     gap: 20px;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr {
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 2s linear infinite;
+}
+
+.result-data p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.8;
 }
