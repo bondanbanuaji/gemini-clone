@@ -1,7 +1,7 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import Sidebar from './components/Sidebar/Sidebar'
 import Main from './components/Main/Main'
-import { fonts } from "./fonts/fonts.js";
 
 const App = () => {
   return (
