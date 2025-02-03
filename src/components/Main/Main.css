@@ -50,7 +50,7 @@
 }
 
 .main .card img {
-    width: 35px;
+    width: 2.25rem;
     padding: 5px;
     position: absolute;
     background-color: white;
@@ -89,7 +89,7 @@
 }
 
 .search-box img {
-    width: 24px;
+    width: 1.5rem;
     cursor: pointer;
 }
 
@@ -113,4 +113,33 @@
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
+}
+
+.result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+.result img {
+    width: 2.5rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
 }
