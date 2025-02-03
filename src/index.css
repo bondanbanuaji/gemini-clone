@@ -2,6 +2,15 @@
 
 @import "tailwindcss";
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -11,8 +20,10 @@
 #root {
     min-height: 100vh;
     display: flex;
+    animation: fadeIn .4s;
 }
 
 body {
     font-family: "Outfit", serif;
 }
+
