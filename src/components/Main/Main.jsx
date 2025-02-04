@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './Main.css'
-import { assets } from '../../assets/aassets'
+import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context'
 
 const Main = () => {
@@ -15,7 +15,7 @@ const Main = () => {
     return (
         <div className='main'>
             <div className='nav'>
-                <p>Gemini</p>
+                <p>Gemini 2.0</p>
                 <img src={assets.user_icon} className='w-10 h-auto rounded-full' alt="" />
             </div>
             <div className="main-container">
@@ -66,6 +66,11 @@ const Main = () => {
                 <div className="main-bottom">
                     <div className="search-box">
                         <input onChange={(e) => setInput(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    onSent();
+                                }
+                            }}
                             value={input}
                             type="text"
                             placeholder='Enter a prompt here' />

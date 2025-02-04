@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import './Sidebar.css'
-import { assets } from '../../assets/aassets'
+import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context'
 
 const Sidebar = () => {
@@ -11,6 +11,8 @@ const Sidebar = () => {
         setRecentPrompt(prompt)
         await onSent(prompt)
     }
+
+    const { darkMode, toggleDarkMode } = useContext(Context);
 
     return (
         <div className="sidebar">
@@ -40,6 +42,10 @@ const Sidebar = () => {
                 <div className="bottom-item recent-entry">
                     <img className="w-5 h-5" src={assets.question_icon} alt="" />
                     {extended ? <p>Help</p> : null}
+                </div>
+                <div className="bottom-item recent-entry" onClick={toggleDarkMode}>
+                    <img className="w-5 h-5" src={darkMode ? assets.sun_icon : assets.moon_icon} alt="" />
+                    {extended ? <p>{darkMode ? "Light Mode" : "Dark Mode"}</p> : null}
                 </div>
                 <div className="bottom-item recent-entry">
                     <img className="w-5 h-5" src={assets.history_icon} alt="" />
